@@ -124,7 +124,9 @@ $(function(){
 		render();
 		return false;
 	})
-	
+	$(".love").on('touchend',function(){
+		$(this).toggleClass("xinh");
+	})
 	//删歌
 	$(".mc").on("touchend", ".shanc", function() {
 		var li = $(this).closest("li");
@@ -166,4 +168,6 @@ $(function(){
 		$(".p-ib").css("width",$(".audio")[0].currentTime / $(".audio")[0].duration * $(".progress").width());    
 		$(".p-i").css("left",$(".audio")[0].currentTime / $(".audio")[0].duration * $(".progress").width());
 	})
+
+	
 })
